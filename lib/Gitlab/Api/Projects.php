@@ -666,4 +666,13 @@ class Projects extends AbstractApi
     {
         return $this->get($this->getProjectPath($project_id, 'deployments/'.$this->encodePath($deployment_id)));
     }
+
+    /**
+     * @param $project_id
+     * @return mixed
+     */
+    public function pushRule($project_id)
+    {
+        return $this->get($this->getProjectPath($project_id, 'push_rule'));
+    }
 }
